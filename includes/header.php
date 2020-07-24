@@ -1,5 +1,7 @@
 <?php  
 require 'config/config.php';
+include("includes/classes/User.php");
+include("includes/classes/Post.php");
 
 
 if (isset($_SESSION['username'])) {
@@ -19,11 +21,16 @@ else {
 
 	<!-- Javascript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="assets/js/bootbox.min.js"></script>
+	<script src="assets/js/social-network.js"></script>
+	<script src="assets/js/jquery.jcrop.js"></script>
+	<script src="assets/js/jcrop_bits.js"></script>
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/jquery.Jcrop.css" type="text/css" />
 
 </head>
 <body>
@@ -47,7 +54,7 @@ else {
 			<a href="#">
 				<i class="fa fa-bell fa-lg"></i>
 			</a>
-			<a href="#">
+			<a href="requests.php">
 				<i class="fa fa-users fa-lg"></i>
 			</a>
 			<a href="#">
